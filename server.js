@@ -58,7 +58,7 @@ res.send('errormessage');
 app.get('/projects',(req,res) => {
 
   res.render('projects.hbs',{
-    pageTitle: "about page",
+    pageTitle: "portfolio page",
     welcomeMessage:'welcome to aur page'
 
   })
