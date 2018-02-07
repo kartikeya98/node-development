@@ -23,10 +23,10 @@ if(err) {
 next();
 
 })
-app.use((req,res,next) => {
-
-res.render('maintain.hbs')
-})
+// app.use((req,res,next) => {
+//
+// res.render('maintain.hbs')
+// })
 
 hbs.registerHelper('getCurrentYear',() => {
 return new Date().getFullYear();
@@ -55,6 +55,14 @@ app.get('/bad',(req,res) => {
 res.send('errormessage');
 
 })
+app.get('/projects',(req,res) => {
+
+  res.render('projects.hbs',{
+    pageTitle: "about page",
+    welcomeMessage:'welcome to aur page'
+
+  })
+});
 
 app.listen(port,() => {
 
